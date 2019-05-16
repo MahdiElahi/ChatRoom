@@ -1,0 +1,81 @@
+﻿@section Scripts
+{
+    <script src="https://unpkg.com/@@aspnet/signalr@@1.0.2/dist/browser/signalr.js" integrity="sha384-gjN8HGdgW45EWYHOqrWrZ8XHLv1zKBralQ9UU94n//6MvoCdsF3NJrBt9FssrFK3" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js" integrity="sha256-CutOzxCRucUsn6C6TcEYsauvvYilEniTXldPa6/wu0k=" crossorigin="anonymous"></script>
+
+    <script src="~/js/Chat.js"></script>
+}
+    
+
+<style>
+    .item:hover {
+        background-color: antiquewhite;
+    }
+</style>
+<section class="col-lg-3  connectedSortable ui-sortable" >
+    <!-- Chat box -->
+    <div class="box box-success">
+        <div class="box-header ui-sortable-handle" style="cursor: move;">
+            <i class="fa fa-comments-o"></i>
+
+            <h3 class="box-title">کاربران</h3>
+        </div>
+        <div class="slimScrollDiv" style="position: relative; overflow: scroll; width: auto; height: 500px;">
+            <div class="box-body chat " id="users-box">
+
+
+            </div><div class="slimScrollBar" style="background: rgb(0, 0, 0); width: 7px; position: absolute; top: 26px; opacity: 0.4; display: none; border-radius: 7px; z-index: 99; right: 1px; height: 224.82px;"></div><div class="slimScrollRail" style="width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div>
+        </div>
+    </div>
+    <!-- /.box (chat box) -->
+
+</section>
+<section class="col-lg-9  connectedSortable ui-sortable hidden" id="main_div">
+    <!-- Chat box -->
+    <div class="box box-success">
+        <div class="box-header ui-sortable-handle" style="cursor: move;">
+            <i class="fa fa-comments-o"></i>
+
+            <h3 class="box-title">گفتگو</h3>
+        </div>
+        <div class="slimScrollDiv" style="position: relative; overflow: scroll; width: auto; height: 500px;">
+            <div class="box-body chat " id="chat-box">
+                <!-- chat item -->
+               
+
+                <!-- /.item -->
+            </div><div class="slimScrollBar" style="background: rgb(0, 0, 0); width: 7px; position: absolute; top: 26px; opacity: 0.4; display: none; border-radius: 7px; z-index: 99; right: 1px; height: 224.82px;"></div><div class="slimScrollRail" style="width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div>
+        </div>
+        <!-- /.chat -->
+        <div class="box-footer">
+            
+            <form class="input-group" id="chatForm">
+                <input class="form-control" placeholder="Type message...">
+
+                <div class="input-group-btn">
+                    <button type="submit" class="btn btn-success"  ><i class="fa fa-plus"></i></button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- /.box (chat box) -->
+
+</section>
+<section class="col-lg-9  connectedSortable ui-sortable hidden " id="first_div">
+    <!-- Chat box -->
+    <div class="box box-success">
+        <div class="box-header ui-sortable-handle" style="cursor: move;">
+            <i class="fa fa-comments-o"></i>
+
+            <h3 class="box-title">گفتگو</h3>
+        </div>
+        <div class="slimScrollDiv" style="position: relative; overflow: scroll; width: auto; height: 500px;">
+            <div class="box-body  " id="chat-box">
+                <div class="alert alert-warning text-center col-md-12 ">ابتدا کاربر مورد نظر را انتخاب نمائید</div>
+            </div><div class="slimScrollBar" style="background: rgb(0, 0, 0); width: 7px; position: absolute; top: 26px; opacity: 0.4; display: none; border-radius: 7px; z-index: 99; right: 1px; height: 224.82px;"></div><div class="slimScrollRail" style="width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div>
+        </div>
+        <!-- /.chat -->
+    </div>
+    <!-- /.box (chat box) -->
+
+</section>
